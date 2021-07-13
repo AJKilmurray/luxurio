@@ -1,13 +1,260 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--poppins);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--white: #ffffff;
+	--black: #000;
+	--dark-gray: #222222;
+	--brown: #8b6647;
+	--light-brown: #e4ad76;
+	--gold: #f9c901;
+	--gray: #c4c7cb;
+
+	--fallback-fonts: Arial, Helvetica, sans-serif;
+	--poppins: Poppins, var(--fallback-fonts);
+	--inter: Inter, var(--fallback-fonts);
+	--work-sans: "Work Sans", var(--fallback-fonts);
+	--fancy: "Otomanopee One", var(--fallback-fonts);
+
+	--transition: all 0.3s linear;
+	--fast-transition: all 0.15s linear;
+
+	--light-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+
+	--radius: 0.25rem;
+	--max-width: 1500px;
+	--margin: 0 auto;
+}
+
+/* Elements */
+
+body {
+	background: var(--dark-gray);
+}
+
+ul {
+	list-style-type: none;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin-bottom: 0.5rem;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+	}
+
+	h4 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 1.25rem;
+	}
+}
+
+/* Global Classes */
+.container {
+	width: 90vw;
+	max-width: var(--max-width);
+	padding: 0 0.75rem;
+	margin: var(--margin);
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-center {
+	display: grid;
+	place-items: center;
+}
+
+.logo {
+	width: 85px;
+	height: 85px;
+	display: flex;
+	align-self: center;
+}
+
+.landing-section {
+	height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+	transition: background 0.3s linear;
+}
+
+.nav-content {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--brown);
+}
+
+.branding {
+	display: flex;
+}
+
+.branding-title {
+	margin-bottom: 0;
+	margin-left: 0.8rem;
+	color: var(--white);
+	font-family: var(--fancy);
+	font-size: 2rem;
+	align-self: center;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+}
+
+.socials a {
+	height: 30px;
+	margin-left: 1.5rem;
+}
+
+.socials-icon {
+	color: var(--white);
+	cursor: pointer;
+	transition: color 0.3s linear;
+}
+
+.socials-icon:hover {
+	color: var(--light-brown);
+}
+
+.nav-links-ul {
+	display: flex;
+}
+
+.nav-list-item {
+	margin-left: 1rem;
+}
+
+.nav-link {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-family: var(--work-sans);
+	letter-spacing: 0.1rem;
+	transition: var(--fast-transition);
+	color: var(--white) !important;
+	padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+	transform: scale(1.5);
+	background: var(--brown);
+}
+
+/* Landing Sections */
+#welcome {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+		url("./images/welcome.jpg") center/cover no-repeat;
+}
+
+#menu {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+		url("./images/menu.jpeg") center/cover no-repeat;
+}
+
+/* Hero */
+
+.hero {
+	height: calc(100vh - 89px);
+	display: flex;
+	align-items: center;
+}
+
+.hero-content {
+	margin-top: -5rem;
+}
+
+.hero-article {
+	margin-bottom: 2rem;
+}
+
+.hero-title {
+	font-family: var(--work-sans);
+	color: var(--white);
+	letter-spacing: 0.5rem;
+	margin-bottom: 0.15rem;
+}
+
+.hero-text {
+	color: var(--gray);
+	max-width: 800px;
+	font-size: 1rem;
+}
+
+.hero-btn {
+	color: var(--white);
+	background: var(--brown);
+	font-size: 1.25rem;
+	padding: 1rem 2rem;
+	font-family: var(--work-sans);
+	transition: var(--fast-transition);
+}
+
+.hero-btn:hover {
+	background: var(--light-brown);
+}
+
+/* Media Queries */
+@media screen and (min-width: 800px) {
+	.container {
+		padding: 0;
+	}
 }
