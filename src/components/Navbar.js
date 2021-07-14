@@ -14,16 +14,32 @@ function Navbar({ navLinks }) {
 					</Link>
 				</div>
 				<div className="socials">
-					<a href="https://twitter.com/home" target="social">
+					<a
+						href="https://twitter.com/home"
+						target="social"
+						className="social-link"
+					>
 						<FaTwitter className="socials-icon" size={30} />
 					</a>
-					<a href="https://www.facebook.com/" target="social">
+					<a
+						href="https://www.facebook.com/"
+						target="social"
+						className="social-link"
+					>
 						<FaFacebook className="socials-icon" size={30} />
 					</a>
-					<a href="https://www.linkedin.com/" target="social">
+					<a
+						href="https://www.linkedin.com/"
+						target="social"
+						className="social-link"
+					>
 						<FaLinkedin className="socials-icon" size={30} />
 					</a>
-					<a href="https://www.instagram.com/" target="social">
+					<a
+						href="https://www.instagram.com/"
+						target="social"
+						className="social-link"
+					>
 						<FaInstagram className="socials-icon" size={30} />
 					</a>
 				</div>

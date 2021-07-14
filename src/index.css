@@ -34,6 +34,8 @@
 	--radius: 0.25rem;
 	--max-width: 1500px;
 	--margin: 0 auto;
+
+	--animation: 0.7s linear both;
 }
 
 /* Elements */
@@ -125,14 +127,62 @@ p {
 	height: 85px;
 	display: flex;
 	align-self: center;
+	animation: branding var(--animation);
+	animation-delay: 0.4s;
 }
 
 .landing-section {
 	height: 100vh;
 }
 
-/* Navbar */
+/* Global Animations */
+@keyframes branding {
+	0% {
+		opacity: 0;
+		transform: translateX(-400%);
+	}
 
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes nav-link {
+	0% {
+		opacity: 0;
+		transform: translateY(-400%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes hero {
+	0% {
+		opacity: 0;
+		transform: translateX(-150%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes hero-btn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Navbar */
 .navbar {
 	transition: background 0.3s linear;
 }
@@ -154,6 +204,7 @@ p {
 	font-family: var(--fancy);
 	font-size: 2rem;
 	align-self: center;
+	animation: branding var(--animation);
 }
 
 .socials {
@@ -161,9 +212,10 @@ p {
 	align-items: center;
 }
 
-.socials a {
+.social-link {
 	height: 30px;
 	margin-left: 1.5rem;
+	animation: nav-link var(--animation);
 }
 
 .socials-icon {
@@ -182,6 +234,21 @@ p {
 
 .nav-list-item {
 	margin-left: 1rem;
+	animation: nav-link var(--animation);
+}
+
+.nav-list-item:nth-child(2),
+.social-link:nth-child(2) {
+	animation-delay: 0.3s;
+}
+
+.nav-list-item:nth-child(3),
+.social-link:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+.social-link:nth-child(4) {
+	animation-delay: 0.9s;
 }
 
 .nav-link {
@@ -189,13 +256,13 @@ p {
 	text-transform: uppercase;
 	font-family: var(--work-sans);
 	letter-spacing: 0.1rem;
-	transition: var(--fast-transition);
+	transition: var(--transition);
 	color: var(--white) !important;
 	padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
-	transform: scale(1.5);
+	color: var(--gray) !important;
 	background: var(--brown);
 }
 
@@ -226,17 +293,24 @@ p {
 	margin-bottom: 2rem;
 }
 
+.hero-title,
+.hero-text {
+	animation: hero var(--animation);
+}
+
 .hero-title {
 	font-family: var(--work-sans);
 	color: var(--white);
 	letter-spacing: 0.5rem;
 	margin-bottom: 0.15rem;
+	animation-delay: 0.3s;
 }
 
 .hero-text {
 	color: var(--gray);
 	max-width: 800px;
 	font-size: 1rem;
+	animation-delay: 0.9s;
 }
 
 .hero-btn {
@@ -246,6 +320,8 @@ p {
 	padding: 1rem 2rem;
 	font-family: var(--work-sans);
 	transition: var(--fast-transition);
+	animation: hero-btn var(--animation);
+	animation-delay: 1.7s;
 }
 
 .hero-btn:hover {
