@@ -1,17 +1,40 @@
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import logo from "../logo.png";
-import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaStream } from "react-icons/fa";
+import { GrClose } from 'react-icons/gr';
 
 function Navbar({ navLinks }) {
+	const [navState, setNavState] = useState(false);
+
+	function toggleNavLinks() {
+		setNavState(!navState);
+		navState ? closeNavLinks() : openNavLinks();
+	}
+
+	function openNavLinks() {
+		const navUl = document.querySelector('.nav-links-ul');
+		const container = document.querySelector('.nav-links');
+		container.style.height = `${navUl.offsetHeight}px`;
+	}
+
+	function closeNavLinks() {
+		const container = document.querySelector('.nav-links');
+		container.style.height = `0px`;
+	}
+
 	return (
 		<header className="navbar">
 			<div className="container nav-content">
 				<div className="branding">
-					<img src={logo} alt="Logo" className="logo" />
-					<Link to="/" className="branding-title">
-						Luxurio
-					</Link>
+					<div className="brand">
+						<img src={logo} alt="Logo" className="logo" />
+						<Link to="/" className="branding-title">
+							Luxurio
+						</Link>
+					</div>
+					{navState ? <GrClose className="nav-toggle" size={24} onClick={toggleNavLinks} /> : <FaStream className="nav-toggle" size={24} onClick={toggleNavLinks} />}
 				</div>
 				<div className="socials">
 					<a

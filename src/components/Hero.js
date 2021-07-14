@@ -8,7 +8,7 @@ function Hero({ title, text, buttonLink, buttonText }) {
 					<h2 className="hero-title">{title}</h2>
 					<p className="hero-text">{text}</p>
 				</article>
-				<Link to={buttonLink} className="hero-btn">
+				<Link to={buttonLink} className="btn hero-btn">
 					{buttonText}
 				</Link>
 			</div>
