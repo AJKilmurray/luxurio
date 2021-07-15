@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import logo from "../logo.png";
-import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaStream } from "react-icons/fa";
-import { GrClose } from 'react-icons/gr';
+import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaBars } from "react-icons/fa";
+import { IoClose } from 'react-icons/io5';
 
 function Navbar({ navLinks }) {
 	const [navState, setNavState] = useState(false);
@@ -11,7 +11,7 @@ function Navbar({ navLinks }) {
 	function toggleNavLinks() {
 		setNavState(!navState);
 		navState ? closeNavLinks() : openNavLinks();
-	}
+	}	
 
 	function openNavLinks() {
 		const navUl = document.querySelector('.nav-links-ul');
@@ -34,7 +34,7 @@ function Navbar({ navLinks }) {
 							Luxurio
 						</Link>
 					</div>
-					{navState ? <GrClose className="nav-toggle" size={24} onClick={toggleNavLinks} /> : <FaStream className="nav-toggle" size={24} onClick={toggleNavLinks} />}
+					{navState ? <IoClose className="nav-toggle" size={30} onClick={toggleNavLinks} /> : <FaBars className="nav-toggle" size={24} onClick={toggleNavLinks} />}
 				</div>
 				<div className="socials">
 					<a
