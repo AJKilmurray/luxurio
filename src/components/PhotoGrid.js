@@ -10,11 +10,7 @@ function PhotoGrid({ items }) {
 			<div className="container photo-grid">
 				{items.map((item, idx) =>
 					idx % 2 === 0 ? (
-						<ScrollAnimation
-							key={idx}
-							animateIn="animate__bounceInLeft"
-							animateOnce={true}
-						>
+						<ScrollAnimation key={idx} animateIn="animate__bounceInLeft" animateOnce={true}>
 							<article className="photo-grid-content">
 								<figure className="grid-img-container align-start">
 									<img className="photo-grid-img" src={item.img} alt="Menu" />
@@ -22,8 +18,7 @@ function PhotoGrid({ items }) {
 								<div key={item.title} className="photo-grid-text">
 									<h3>{item.title}</h3>
 									<h4>
-										Starting from{" "}
-										<span className="gold-highlight">${item.pricing}</span>
+										Starting from <span className="gold-highlight">${item.pricing}</span>
 									</h4>
 									<p>{item.text}</p>
 									<Link to="/menu" className="btn">
@@ -33,17 +28,12 @@ function PhotoGrid({ items }) {
 							</article>
 						</ScrollAnimation>
 					) : (
-						<ScrollAnimation
-							key={idx}
-							animateIn="animate__bounceInRight"
-							animateOnce={true}
-						>
+						<ScrollAnimation key={idx} animateIn="animate__bounceInRight" animateOnce={true}>
 							<article className="photo-grid-content">
 								<div key={item.title} className="photo-grid-text">
 									<h3>{item.title}</h3>
 									<h4>
-										Starting from{" "}
-										<span className="gold-highlight">${item.pricing}</span>
+										Starting from <span className="gold-highlight">${item.pricing}</span>
 									</h4>
 									<p>{item.text}</p>
 									<Link to="/menu" className="btn">
