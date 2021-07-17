@@ -15,8 +15,10 @@ function FooterAccordian({ title, list, id }) {
 
 			if (accordianId === id && textContainer.offsetHeight > 0) {
 				textContainer.style.height = "0px";
+				accordianToggleIcon.classList.remove("rotate-icon");
 			} else if (accordianId === id && textContainer.offsetHeight === 0) {
 				textContainer.style.height = `${accordianUl.offsetHeight}px`;
+				accordianToggleIcon.classList.add("rotate-icon");
 			}
 		}
 	}
@@ -38,7 +40,9 @@ function FooterAccordian({ title, list, id }) {
 			<div className="accordian-text-container">
 				<ul className="footer-links">
 					{list.map((link, idx) => (
-						<li key={idx}>{link}</li>
+						<li className="footer-link" key={idx}>
+							{link}
+						</li>
 					))}
 				</ul>
 			</div>

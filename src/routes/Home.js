@@ -50,20 +50,20 @@ function Home() {
 	// Footer Accordians
 	const footerAccordians = [
 		{
-			title: "Links",
-			list: [<Link to="/">Link1</Link>, <Link to="/">Link2</Link>, <Link to="/">Link3</Link>, <Link to="/">Link4</Link>, <Link to="/">Link5</Link>],
+			title: "Pages",
+			list: [<Link to="/">Home</Link>, <Link to="/menu">Menu</Link>, <Link to="/bookings">Bookings</Link>, <Link to="/about">About</Link>],
 		},
 		{
-			title: "Help",
-			list: [<Link to="/">Link1</Link>, <Link to="/">Link2</Link>, <Link to="/">Link3</Link>, <Link to="/">Link4</Link>, <Link to="/">Link5</Link>],
+			title: "Contact",
+			list: [<Link to="/">Email</Link>, <Link to="/">Phone</Link>, <Link to="/">Post Office</Link>, <Link to="/">Instagram</Link>, <Link to="/">Twitter</Link>],
 		},
 		{
-			title: "Links",
-			list: [<Link to="/">Link1</Link>, <Link to="/">Link2</Link>, <Link to="/">Link3</Link>, <Link to="/">Link4</Link>, <Link to="/">Link5</Link>],
+			title: "Menu",
+			list: [<Link to="/">Breakfast</Link>, <Link to="/">Lunch</Link>, <Link to="/">Dinner</Link>, <Link to="/">Desserts</Link>, <Link to="/">Drinks</Link>],
 		},
 		{
-			title: "Help",
-			list: [<Link to="/">Link1</Link>, <Link to="/">Link2</Link>, <Link to="/">Link3</Link>, <Link to="/">Link4</Link>, <Link to="/">Link5</Link>],
+			title: "About",
+			list: [<Link to="/">Opening Times</Link>, <Link to="/">Staff</Link>, <Link to="/">Marketing</Link>, <Link to="/">Terms</Link>, <Link to="/">Conditions</Link>],
 		},
 	];
 

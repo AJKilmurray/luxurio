@@ -11,7 +11,7 @@ function PhotoGrid({ items }) {
 				{items.map((item, idx) =>
 					idx % 2 === 0 ? (
 						<ScrollAnimation key={idx} animateIn="animate__bounceInLeft" animateOnce={true}>
-							<article className="photo-grid-content">
+							<article className="photo-grid-content content-odd">
 								<figure className="grid-img-container align-start">
 									<img className="photo-grid-img" src={item.img} alt="Menu" />
 								</figure>
@@ -29,7 +29,7 @@ function PhotoGrid({ items }) {
 						</ScrollAnimation>
 					) : (
 						<ScrollAnimation key={idx} animateIn="animate__bounceInRight" animateOnce={true}>
-							<article className="photo-grid-content">
+							<article className="photo-grid-content content-even">
 								<div key={item.title} className="photo-grid-text">
 									<h3>{item.title}</h3>
 									<h4>
