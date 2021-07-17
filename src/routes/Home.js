@@ -73,7 +73,7 @@ function Home() {
 				<Navbar navLinks={["menu", "bookings", "about"]} />
 				<Hero title={heroTitle} text={heroText} buttonLink="bookings" buttonText="Book Now" />
 			</section>
-			<Separator textSide="left" title={sepTitle} text={sepText} btnLink="menu" btnText="Menu" imgSrc={stockMenu} />
+			<Separator textSide="left" title={sepTitle} text={sepText} btnLink="menu" btnText="View Menu" imgSrc={stockMenu} />
 			<PhotoGrid items={photoGridItems} />
 			<Footer accordians={footerAccordians} />
 		</main>
