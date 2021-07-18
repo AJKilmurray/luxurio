@@ -6,23 +6,27 @@ import stockMenu from "../images/stock-menu.png";
 import PhotoGrid from "../components/PhotoGrid";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
+import Beans from "../images/beans.svg";
 
 // Utils
 import { footerAccordians, photoGridItems, scheduleHeader, scheduleDays, homeHeroText, homeHeroTitle, homeSepText, homeSepTitle } from "../utils/utils";
 
 function Home() {
 	return (
-		<main>
-			<BackToTop top="#welcome" />
-			<section id="welcome" className="landing-section">
-				<Navbar navLinks={["menu", "bookings", "about"]} />
-				<Hero title={homeHeroTitle} text={homeHeroText} buttonLink="bookings" buttonText="Book Now" />
-			</section>
-			<Schedule headers={scheduleHeader} days={scheduleDays} />
-			<Separator textSide="left" title={homeSepTitle} text={homeSepText} btnLink="menu" btnText="Take a Look" imgSrc={stockMenu} />
-			<PhotoGrid items={photoGridItems} />
-			<Footer accordians={footerAccordians} />
-		</main>
+		<>
+			<img src={Beans} />
+			<main>
+				<BackToTop top="#welcome" />
+				<section id="welcome" className="landing-section">
+					<Navbar navLinks={["menu", "bookings", "about"]} />
+					<Hero title={homeHeroTitle} text={homeHeroText} buttonLink="bookings" buttonText="Book Now" />
+				</section>
+				<Schedule headers={scheduleHeader} days={scheduleDays} />
+				<Separator textSide="left" title={homeSepTitle} text={homeSepText} btnLink="menu" btnText="Take a Look" imgSrc={stockMenu} />
+				<PhotoGrid items={photoGridItems} />
+				<Footer accordians={footerAccordians} />
+			</main>
+		</>
 	);
 }
 
