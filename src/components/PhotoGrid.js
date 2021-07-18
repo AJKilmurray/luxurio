@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function PhotoGrid({ items }) {
 	return (
-		<section className="menu-display">
+		<section className="menu-display" id="menu-introduction">
 			<ScrollAnimation animateIn="animate__rollIn" animateOnce={true}>
 				<h2>What we serve</h2>
 			</ScrollAnimation>

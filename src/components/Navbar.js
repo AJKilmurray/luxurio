@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import logo from "../logo.png";
 import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaBars } from "react-icons/fa";
-import { IoClose } from 'react-icons/io5';
+import { IoClose } from "react-icons/io5";
 
 function Navbar({ navLinks }) {
 	const [navState, setNavState] = useState(false);
@@ -11,16 +11,16 @@ function Navbar({ navLinks }) {
 	function toggleNavLinks() {
 		setNavState(!navState);
 		navState ? closeNavLinks() : openNavLinks();
-	}	
+	}
 
 	function openNavLinks() {
-		const navUl = document.querySelector('.nav-links-ul');
-		const container = document.querySelector('.nav-links');
+		const navUl = document.querySelector(".nav-links-ul");
+		const container = document.querySelector(".nav-links");
 		container.style.height = `${navUl.offsetHeight}px`;
 	}
 
 	function closeNavLinks() {
-		const container = document.querySelector('.nav-links');
+		const container = document.querySelector(".nav-links");
 		container.style.height = `0px`;
 	}
 
@@ -37,32 +37,16 @@ function Navbar({ navLinks }) {
 					{navState ? <IoClose className="nav-toggle" size={30} onClick={toggleNavLinks} /> : <FaBars className="nav-toggle" size={24} onClick={toggleNavLinks} />}
 				</div>
 				<div className="socials">
-					<a
-						href="https://twitter.com/home"
-						target="social"
-						className="social-link"
-					>
+					<a href="https://twitter.com/home" target="social" className="social-link">
 						<FaTwitter className="socials-icon" size={30} />
 					</a>
-					<a
-						href="https://www.facebook.com/"
-						target="social"
-						className="social-link"
-					>
+					<a href="https://www.facebook.com/" target="social" className="social-link">
 						<FaFacebook className="socials-icon" size={30} />
 					</a>
-					<a
-						href="https://www.linkedin.com/"
-						target="social"
-						className="social-link"
-					>
+					<a href="https://www.linkedin.com/" target="social" className="social-link">
 						<FaLinkedin className="socials-icon" size={30} />
 					</a>
-					<a
-						href="https://www.instagram.com/"
-						target="social"
-						className="social-link"
-					>
+					<a href="https://www.instagram.com/" target="social" className="social-link">
 						<FaInstagram className="socials-icon" size={30} />
 					</a>
 				</div>
