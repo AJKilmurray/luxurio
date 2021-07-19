@@ -26,18 +26,22 @@ function Separator({ textSide, title, text, btnLink, btnText, imgSrc }) {
 	) : (
 		<section className="separator">
 			<div className="container grid-container">
-				<figure className="separator-figure flex-container">
-					<img className="separator-img" src={imgSrc} alt="" />
-				</figure>
-				<article className="separator-text">
-					<h2>{title}</h2>
-					<p>{text}</p>
-					<div className="separator-link">
-						<Link to={btnLink} className="btn">
-							{btnText}
-						</Link>
-					</div>
-				</article>
+				<ScrollAnimation animateIn="animate__bounceIn" animateOnce={true}>
+					<figure className="separator-figure flex-container">
+						<img className="separator-img" src={imgSrc} alt="" />
+					</figure>
+				</ScrollAnimation>
+				<ScrollAnimation animateIn="animate__bounceIn" animateOnce={true}>
+					<article className="separator-text">
+						<h2>{title}</h2>
+						<p>{text}</p>
+						<div className="separator-link">
+							<Link to={btnLink} className="btn">
+								{btnText}
+							</Link>
+						</div>
+					</article>
+				</ScrollAnimation>
 			</div>
 		</section>
 	);

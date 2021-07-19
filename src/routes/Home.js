@@ -14,7 +14,7 @@ import { footerAccordians, photoGridItems, scheduleHeader, scheduleDays, homeHer
 function Home() {
 	return (
 		<>
-			<img src={Beans} />
+			<img src={Beans} className="beans" alt="" />
 			<main>
 				<BackToTop top="#welcome" />
 				<section id="welcome" className="landing-section">
