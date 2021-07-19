@@ -708,6 +708,7 @@ footer {
 	padding: 3.5rem 0 !important;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	justify-items: center;
+	gap: 2rem;
 }
 
 .footer-link {
@@ -731,6 +732,7 @@ footer {
 	border-top: 1px solid var(--brown);
 	align-items: center;
 	padding-top: 3.5rem !important;
+	gap: 2rem;
 }
 
 #map {
@@ -745,7 +747,7 @@ footer {
 	justify-self: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	height: 100%;
 }
 
@@ -755,6 +757,12 @@ footer {
 	color: var(--gold);
 	width: fit-content;
 	border-bottom: 2px solid var(--brown);
+}
+
+.footer-details ul,
+.about-article p,
+.future-article p {
+	margin-top: 0.5rem;
 }
 
 .footer-details ul li {
@@ -772,8 +780,9 @@ footer {
 
 .about-article,
 .future-article {
-	align-self: flex-end !important;
+	align-self: flex-start !important;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 }
 
@@ -884,11 +893,26 @@ footer {
 	.separator-img {
 		width: 550px;
 	}
+
+	.about-article p,
+	.future-article p {
+		font-size: 0.9rem;
+	}
 }
 
 @media screen and (max-width: 1445px) {
 	.accordian {
 		width: 225px !important;
+	}
+}
+
+@media screen and (max-width: 1315px) {
+	.footer-about-container {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.future-article {
+		grid-column: span 3;
 	}
 }
 
@@ -958,6 +982,14 @@ footer {
 	.separator-img {
 		width: 400px !important;
 		box-shadow: var(--m-panel-shadow-pos);
+	}
+
+	.footer-about-container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.future-article {
+		grid-column: span 1;
 	}
 }
 
@@ -1066,12 +1098,19 @@ footer {
 }
 
 @media screen and (max-width: 760px) {
-	.footer-container {
+	.footer-container,
+	.footer-about-container {
 		grid-template-columns: 1fr 1fr;
 	}
 
 	.accordian:nth-child(4) {
 		grid-column: auto;
+	}
+}
+
+@media screen and (max-width: 705px) {
+	.footer-about-container {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -1172,6 +1211,12 @@ footer {
 
 	.menu-display {
 		padding-top: 2rem;
+	}
+}
+
+@media screen and (max-width: 345px) {
+	#map {
+		width: 250px !important;
 	}
 }
 
