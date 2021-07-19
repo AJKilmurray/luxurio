@@ -750,7 +750,8 @@ footer {
 }
 
 .footer-details h3,
-.about-article h3 {
+.about-article h3,
+.future-article h3 {
 	color: var(--gold);
 	width: fit-content;
 	border-bottom: 2px solid var(--brown);
@@ -769,13 +770,15 @@ footer {
 	margin: auto 0.75rem auto 0;
 }
 
-.about-article {
+.about-article,
+.future-article {
 	align-self: flex-end !important;
 	display: flex;
 	justify-content: space-between;
 }
 
-.about-article p {
+.about-article p,
+.future-article p {
 	font-size: 1rem;
 	color: var(--gray);
 }

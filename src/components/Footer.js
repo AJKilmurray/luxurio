@@ -5,6 +5,7 @@ import { HiPhone } from "react-icons/hi";
 import { RiTruckLine } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 
+// Footer Component
 function Footer({ accordians }) {
 	const date = new Date();
 	const year = date.getFullYear();
@@ -33,6 +34,10 @@ function Footer({ accordians }) {
 					</article>
 					<article className="about-article">
 						<h3>About Us</h3>
+						<p>Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.</p>
+					</article>
+					<article className="future-article">
+						<h3>Our Future</h3>
 						<p>Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.</p>
 					</article>
 				</div>
