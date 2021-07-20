@@ -5,7 +5,7 @@ function NavLinks({ links }) {
 		<>
 			{links.map((link) => (
 				<li key={link} className="nav-list-item">
-					<Link to={link} className="nav-link">
+					<Link to={link === "/" ? "/" : `/${link}`} className="nav-link">
 						{link === "/" ? "home" : link}
 					</Link>
 				</li>
