@@ -5,8 +5,7 @@ import Dinner from "../images/dinner.jpg";
 import Dessert from "../images/dessert.jpg";
 
 // Hero Title & Text [Home]
-export const homeHeroText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.";
+export const homeHeroText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.";
 export const homeHeroTitle = "Exceptional Tastes";
 
 // Schedule
@@ -50,8 +49,7 @@ export const scheduleDays = {
 };
 
 // Separator Title & Text [Home]
-export const homeSepText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.";
+export const homeSepText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.";
 export const homeSepTitle = "Extravagant Menus";
 
 // Photo Grid Items
@@ -61,24 +59,28 @@ export const photoGridItems = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.",
     img: Breakfast,
     pricing: 4.99,
+    category: "breakfast",
   },
   {
     title: "Lunch",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.",
     img: Lunch,
     pricing: 8.99,
+    category: "lunch",
   },
   {
     title: "Dinner",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.",
     img: Dinner,
     pricing: 12.99,
+    category: "dinner",
   },
   {
     title: "Dessert",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.",
     img: Dessert,
     pricing: 5.49,
+    category: "dessert",
   },
 ];
 
@@ -86,42 +88,19 @@ export const photoGridItems = [
 export const footerAccordians = [
   {
     title: "Pages",
-    list: [
-      <Link to="/">Home</Link>,
-      <Link to="/menu">Menu</Link>,
-      <Link to="/bookings">Bookings</Link>,
-      <Link to="/about">About</Link>,
-    ],
+    list: [<Link to="/">Home</Link>, <Link to="/menu">Menu</Link>, <Link to="/bookings">Bookings</Link>, <Link to="/about">About</Link>],
   },
   {
     title: "Contact",
-    list: [
-      <Link to="/">Email</Link>,
-      <Link to="/">Phone</Link>,
-      <Link to="/">Post Office</Link>,
-      <Link to="/">Instagram</Link>,
-      <Link to="/">Twitter</Link>,
-    ],
+    list: [<Link to="/">Email</Link>, <Link to="/">Phone</Link>, <Link to="/">Post Office</Link>, <Link to="/">Instagram</Link>, <Link to="/">Twitter</Link>],
   },
   {
     title: "Menu",
-    list: [
-      <Link to="/">Breakfast</Link>,
-      <Link to="/">Lunch</Link>,
-      <Link to="/">Dinner</Link>,
-      <Link to="/">Desserts</Link>,
-      <Link to="/">Drinks</Link>,
-    ],
+    list: [<Link to="/">Breakfast</Link>, <Link to="/">Lunch</Link>, <Link to="/">Dinner</Link>, <Link to="/">Desserts</Link>, <Link to="/">Drinks</Link>],
   },
   {
     title: "About",
-    list: [
-      <Link to="/">Opening Times</Link>,
-      <Link to="/">Staff</Link>,
-      <Link to="/">Marketing</Link>,
-      <Link to="/">Terms</Link>,
-      <Link to="/">Conditions</Link>,
-    ],
+    list: [<Link to="/">Opening Times</Link>, <Link to="/">Staff</Link>, <Link to="/">Marketing</Link>, <Link to="/">Terms</Link>, <Link to="/">Conditions</Link>],
   },
 ];
 

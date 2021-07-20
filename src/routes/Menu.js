@@ -3,11 +3,7 @@ import MenuNav from "../components/MenuNav";
 import Footer from "../components/Footer";
 
 // Utils
-import {
-  footerAccordians,
-  menuNavCategories,
-  menuNavHeader,
-} from "../utils/utils";
+import { footerAccordians, menuNavCategories, menuNavHeader } from "../utils/utils";
 
 function Menu() {
   return (
