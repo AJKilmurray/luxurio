@@ -6,15 +6,15 @@ import Footer from "../components/Footer";
 import { footerAccordians, menuNavCategories, menuNavHeader } from "../utils/utils";
 
 function Menu() {
-	return (
-		<>
-			<section className="landing-section" id="menu-landing">
-				<Navbar navLinks={["/", "bookings", "about"]} />
-				<MenuNav heading={menuNavHeader} navCategories={menuNavCategories} />
-			</section>
-			<Footer accordians={footerAccordians} />
-		</>
-	);
+  return (
+    <>
+      <section id="menu-landing">
+        <Navbar navLinks={["/", "bookings", "about"]} />
+        <MenuNav heading={menuNavHeader} navCategories={menuNavCategories} />
+      </section>
+      <Footer accordians={footerAccordians} />
+    </>
+  );
 }
 
 export default Menu;

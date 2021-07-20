@@ -4,6 +4,16 @@ import Lunch from "../images/lunch.jpg";
 import Dinner from "../images/dinner.jpg";
 import Dessert from "../images/dessert.jpg";
 
+// Breakfast menu items
+import FullEnglishBreakfast from "../images/menu-fullEnglishBreakfast.jpg";
+import FrenchToast from "../images/menu-frenchToast.jpg";
+import ScrambledEggs from "../images/menu-scrambledEggs.jpg";
+import Waffles from "../images/menu-waffles.jpg";
+import Pancakes from "../images/menu-pancakes.jpg";
+import Porridge from "../images/menu-porridge.jpg";
+import HamSandwich from "../images/menu-hamSandwich.jpg";
+import FruitSalad from "../images/menu-fruitSalad.jpg";
+
 // Hero Title & Text [Home]
 export const homeHeroText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae posuere augue. Nunc maximus eros eget elit iaculis, et facilisis metus porta. In hac habitasse platea dictumst. Phasellus varius tempus ipsum a egestas. Phasellus ornare, dolor sed molestie euismod, felis diam consequat sapien, sit amet rutrum justo tellus nec velit. Nulla vitae ornare dolor. Morbi imperdiet tellus ex.";
 export const homeHeroTitle = "Exceptional Tastes";
@@ -110,14 +120,68 @@ export const menuNavCategories = {
     name: "breakfast",
     menu: [
       {
-        title: "brk",
-        text: "this is text",
-        price: "$25.40",
+        meal: "Full English Breakfast",
+        desc: "Our full english breakfast is freshly cooked and includes bacon, sausages, eggs, black pudding, baked beans, tomatoes, mushrooms and toast.",
+        price: 12.99,
+        image: FullEnglishBreakfast,
+        servings: 2,
+        calories: 875,
       },
       {
-        title: "another brk",
-        text: "yummy yummg",
-        price: "$12",
+        meal: "French Toast",
+        desc: 'French toast is a dish made of sliced bread soaked in beaten eggs and typically milk, then pan fried. Alternative names and variants include "eggy bread", "Bombay toast", "gypsy toast", and "poor knights".',
+        price: 9.99,
+        image: FrenchToast,
+        servings: 2,
+        calories: 795,
+      },
+      {
+        meal: "Scrambled Eggs",
+        desc: "Scrambled eggs is a dish made from eggs stirred, whipped or beaten together while being gently heated, typically with salt, butter and sometimes other ingredients.",
+        price: 11.99,
+        image: ScrambledEggs,
+        servings: 1,
+        calories: 460,
+      },
+      {
+        meal: "Waffles",
+        desc: "A waffle is a dish made from leavened batter or dough that is cooked between two plates that are patterned to give a characteristic size, shape, and surface impression. There are many variations based on the type of waffle iron and recipe used.",
+        price: 7.99,
+        image: Waffles,
+        servings: 2,
+        calories: 650,
+      },
+      {
+        meal: "Pancakes",
+        desc: "A pancake is a flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter.",
+        price: 8.99,
+        image: Pancakes,
+        servings: 2,
+        calories: 950,
+      },
+      {
+        meal: "Fruit Salad",
+        desc: "Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either their own juices or a syrup.",
+        price: 13.99,
+        image: FruitSalad,
+        servings: 2,
+        calories: 790,
+      },
+      {
+        meal: "Porridge",
+        desc: "Porridge is a food commonly eaten as a breakfast cereal dish, made by boiling ground, crushed or chopped starchy plants—typically grain—in milk.",
+        price: 3.99,
+        image: Porridge,
+        servings: 1,
+        calories: 600,
+      },
+      {
+        meal: "Ham Sandwich",
+        desc: "The ham sandwich is a common type of sandwich. The bread may be fresh or toasted, and it can be made with a variety of toppings including cheese and vegetables like lettuce, tomato, onion or pickle slices. Various kinds of mustard and mayonnaise are also common.",
+        price: 7.99,
+        image: HamSandwich,
+        servings: 1,
+        calories: 560,
       },
     ],
   },
