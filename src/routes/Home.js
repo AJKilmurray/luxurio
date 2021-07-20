@@ -5,8 +5,6 @@ import Separator from "../components/Separator";
 import stockMenu from "../images/stock-menu.png";
 import PhotoGrid from "../components/PhotoGrid";
 import Footer from "../components/Footer";
-import BackToTop from "../components/BackToTop";
-import Beans from "../images/beans.svg";
 
 // Utils
 import { footerAccordians, photoGridItems, scheduleHeader, scheduleDays, homeHeroText, homeHeroTitle, homeSepText, homeSepTitle } from "../utils/utils";
@@ -14,9 +12,7 @@ import { footerAccordians, photoGridItems, scheduleHeader, scheduleDays, homeHer
 function Home() {
 	return (
 		<>
-			<img src={Beans} className="beans" alt="" />
 			<main>
-				<BackToTop top="#welcome" />
 				<section id="welcome" className="landing-section">
 					<Navbar navLinks={["menu", "bookings", "about"]} />
 					<Hero title={homeHeroTitle} text={homeHeroText} buttonLink="bookings" buttonText="Book Now" />

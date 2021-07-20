@@ -1,36 +1,37 @@
-import {
-  Link,
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams,
-} from "react-router-dom";
+import { Link, BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
 
-function MenuNav({ heading, navCategories, currentCategory }) {
-  const categories = Object.values(navCategories);
+function MenuNav({ heading, navCategories }) {
+	const categories = Object.values(navCategories);
+	return (
+		<Router>
+			<nav className="menu-nav">
+				<div className="container menu-nav-container">
+					<div className="menu-nav-header">
+						<h3>{heading}</h3>
+					</div>
+					<ul className="menu-nav-links">
+						{categories.map((category, idx) => (
+							<Link to={`/menu/category/${category.name}`} className="menu-nav-link" key={idx}>
+								{category.name}
+							</Link>
+						))}
+					</ul>
+				</div>
+				<Switch>
+					<Route path="/menu/category/:id" children={<DisplayID menuCategories={categories} />} />
+				</Switch>
+			</nav>
+		</Router>
+	);
+}
 
-  return (
-    <Router>
-      <nav className="menu-nav">
-        <div className="container menu-nav-container">
-          <div className="menu-nav-header">
-            <h3>{heading}</h3>
-          </div>
-          <ul className="menu-nav-links">
-            {categories.map((category, idx) => (
-              <Link
-                to={`menu/category/${category.name}`}
-                className="menu-nav-link"
-                key={idx}
-              >
-                {category.name}
-              </Link>
-            ))}
-          </ul>
-        </div>
-      </nav>
-    </Router>
-  );
+function DisplayID({ menuCategories }) {
+	let { id } = useParams();
+	return (
+		<div>
+			<h3>{menuCategories.filter((category) => category.name.toString() === id)}</h3>
+		</div>
+	);
 }
 
 export default MenuNav;

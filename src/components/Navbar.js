@@ -25,7 +25,7 @@ function Navbar({ navLinks }) {
 	}
 
 	return (
-		<header className="navbar">
+		<header className="navbar" id="top">
 			<div className="container nav-content">
 				<div className="branding">
 					<div className="brand">

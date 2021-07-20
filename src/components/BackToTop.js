@@ -1,6 +1,6 @@
 import { FaChevronUp } from "react-icons/fa";
 
-function BackToTop({ top }) {
+function BackToTop() {
 	setInterval(() => {
 		if (window.scrollY > 400 && !document.querySelector(".back-top").classList.contains("show-back-top")) {
 			document.querySelector(".back-top").classList.add("show-back-top");
@@ -15,7 +15,7 @@ function BackToTop({ top }) {
 	}
 
 	return (
-		<a href={top} className="back-top" onClick={hideBtn}>
+		<a href="#top" className="back-top" onClick={hideBtn}>
 			<FaChevronUp className="back-top-icon" />
 		</a>
 	);
