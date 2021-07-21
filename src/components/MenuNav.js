@@ -30,29 +30,31 @@ function DisplayID({ menuCategories }) {
   const categories = Object.values(menuCategories);
 
   return (
-    <section className="menu-category-display">
-      <div className="container">
-        <Link to="/menu" className="menu-return btn">
-          Go Back
-        </Link>
-        <h3 className="menu-category-title">{id} Menu</h3>
-        <div className="grid-container category-results">
-          {categories.map((category) => {
-            if (category.name === id) {
-              return category.menu.map((item, idx) => (
-                <div className="menu-card" key={idx}>
-                  <figure>
-                    <img src={item.image} alt="" />
-                  </figure>
-                  <h3>{item.meal}</h3>
-                  <h4>£{item.price}</h4>
-                </div>
-              ));
-            }
-          })}
+    <Router>
+      <section className="menu-category-display">
+        <div className="container">
+          <Link to="/menu" className="menu-return btn">
+            Go Back
+          </Link>
+          <h3 className="menu-category-title">{id} Menu</h3>
+          <div className="grid-container category-results">
+            {categories.map((category) => {
+              if (category.name === id) {
+                return category.menu.map((item, idx) => (
+                  <Link path={`/menu/category/${category.name}/${item.id}`} className="menu-card-link">
+                    <div className="menu-card" key={idx}>
+                      <img src={item.image} alt="" />
+                      <h3>{item.meal}</h3>
+                      <h4>£{item.price}</h4>
+                    </div>
+                  </Link>
+                ));
+              }
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Router>
   );
 }
 
