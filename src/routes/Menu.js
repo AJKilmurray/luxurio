@@ -1,3 +1,4 @@
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import MenuNav from "../components/MenuNav";
 import Footer from "../components/Footer";
@@ -7,13 +8,13 @@ import { footerAccordians, menuNavCategories, menuNavHeader } from "../utils/uti
 
 function Menu() {
   return (
-    <>
+    <Router>
       <section id="menu-landing">
         <Navbar navLinks={["/", "bookings", "about"]} />
         <MenuNav heading={menuNavHeader} navCategories={menuNavCategories} />
       </section>
       <Footer accordians={footerAccordians} />
-    </>
+    </Router>
   );
 }
 

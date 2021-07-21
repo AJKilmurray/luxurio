@@ -16,7 +16,6 @@ function App() {
       <Route path="/bookings" exact />
       <Route path="/about" exact component={About} />
       <Route path="/menu/category" component={Menu} />
-      <BackToTop />
     </Router>
   );
 }
