@@ -883,6 +883,16 @@ footer {
 	margin: 0 auto;
 }
 
+.menu-of-day-content {
+	margin: 4rem auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
+.MOD-item {
+	border: 1px solid var(--gray);
+}
+
 .menu-category-display {
 	min-height: 1000px;
 	height: 100vh;
@@ -923,6 +933,7 @@ footer {
 	transform: scale(1.02);
 }
 
+.MOD-item img,
 .menu-card img {
 	width: 250px;
 	height: 250px;
