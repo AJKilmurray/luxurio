@@ -13,7 +13,7 @@ function MenuNav({ heading = "Menu", navCategories }) {
 				<ul className="menu-nav-links">
 					{/* For each category, display a nav link to the page to display the menu for that category */}
 					{categories.map((category, idx) => (
-						<Link to={`/menu/category/${category.name}`} className="menu-nav-link" key={idx} onClick={renderCategory}>
+						<Link to={`/menu/category/${category.name}`} className="menu-nav-link" key={idx}>
 							{category.name}
 						</Link>
 					))}

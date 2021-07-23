@@ -876,6 +876,13 @@ footer {
 	margin-bottom: 2rem;
 }
 
+.menu-article h3 {
+	width: fit-content;
+	border-bottom: 2px solid var(--brown);
+	color: var(--gold);
+	margin: 0 auto;
+}
+
 .menu-category-display {
 	min-height: 1000px;
 	height: 100vh;
@@ -929,7 +936,7 @@ footer {
 
 .menu-card h3 {
 	color: var(--light-brown);
-	font-size: 1rem;
+	font-size: 1.1rem;
 }
 
 .menu-card h4 {
