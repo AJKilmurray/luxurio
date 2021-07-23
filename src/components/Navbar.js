@@ -34,7 +34,11 @@ function Navbar({ navLinks }) {
 							Luxurio
 						</Link>
 					</div>
-					{navState ? <IoClose className="nav-toggle" size={30} onClick={toggleNavLinks} /> : <FaBars className="nav-toggle" size={24} onClick={toggleNavLinks} />}
+					{navState ? (
+						<IoClose className="nav-toggle" size={30} onClick={toggleNavLinks} />
+					) : (
+						<FaBars className="nav-toggle" size={24} onClick={toggleNavLinks} />
+					)}
 				</div>
 				<div className="socials">
 					<a href="https://twitter.com/home" target="social" className="social-link">
