@@ -125,7 +125,7 @@ export const footerAccordians = [
 ];
 
 export const menuNavHeader = "Menu";
-export const menuNavCategories = {
+export const menuCategories = {
   breakfast: {
     name: "breakfast",
     menu: [

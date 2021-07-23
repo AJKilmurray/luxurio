@@ -739,6 +739,7 @@ footer {
   width: 300px;
   margin: 0 auto;
   border-radius: var(--radius);
+  grid-column: span 1;
 }
 
 .footer-details {
