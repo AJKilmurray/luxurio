@@ -1,27 +1,38 @@
-import { createFactory } from "react";
+import { Link } from "react-router-dom";
 
 function MenuOverview({ menuCategories }) {
 	const categories = Object.values(menuCategories);
+	const date = new Date();
+
 	return (
 		<section id="menu-overview">
 			<div className="container">
 				<article id="menu-of-day" className="menu-article">
-					<h3>Menu of The Day</h3>
+					<h3 className="menu-article-title">Menu of The Day</h3>
+					<h4 className="menu-article-sale">
+						<span className="MOD-stat-highlight">50%+</span> Off!
+					</h4>
 					<div className="grid-container menu-of-day-content">
 						{categories.map((category) => {
 							if (category.name !== "drinks") {
-								const randomIdx = Math.floor(Math.random() * category.menu.length);
-								const item = category.menu[randomIdx];
+								const item = category.menu[date.getDay()];
 								return (
-									<article className="MOD-item" key={item.meal}>
-										<img src={item.image} />
-										<h4>{item.meal}</h4>
-										<h4>£{item.price}</h4>
-										<div className="MOD-item-stats">
-											<h5>Calories: {item.calories}</h5>
-											<h5>Servings: {item.servings}</h5>
-										</div>
-									</article>
+									<Link to={`/menu/category/${category.name}/${item.id}`} className="MOD-redirect">
+										<article className="MOD-item" key={item.meal}>
+											<h3>{category.name}</h3>
+											<img src={item.image} />
+											<h4 className="MOD-item-title">{item.meal}</h4>
+											<h4 className="MOD-item-price">£{Math.round(Number(item.price)) / 2}</h4>
+											<div className="MOD-item-stats">
+												<h5 className="MOD-stat">
+													Calories: <span className="MOD-stat-highlight">{item.calories}</span>
+												</h5>
+												<h5 className="MOD-stat">
+													Servings: <span className="MOD-stat-highlight">{item.servings}</span>
+												</h5>
+											</div>
+										</article>
+									</Link>
 								);
 							}
 						})}
