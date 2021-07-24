@@ -173,6 +173,10 @@ export const menuNavHeader = "Menu";
 export const menuCategories = {
 	breakfast: {
 		name: "breakfast",
+		times: {
+			start: "8:30am",
+			end: "11:30am",
+		},
 		menu: [
 			{
 				id: 1,
@@ -250,6 +254,10 @@ export const menuCategories = {
 	},
 	lunch: {
 		name: "lunch",
+		times: {
+			start: "11:30am",
+			end: "4:00pm",
+		},
 		menu: [
 			{
 				id: 1,
@@ -327,6 +335,10 @@ export const menuCategories = {
 	},
 	dinner: {
 		name: "dinner",
+		times: {
+			start: "4:00pm",
+			end: "8:00pm",
+		},
 		menu: [
 			{
 				id: 1,
@@ -404,6 +416,10 @@ export const menuCategories = {
 	},
 	dessert: {
 		name: "dessert",
+		times: {
+			start: "3pm",
+			end: "8pm",
+		},
 		menu: [
 			{
 				id: 1,

@@ -18,6 +18,7 @@ function Menu() {
 				<Router>
 					<MenuNav heading={menuNavHeader} navCategories={menuCategories} />
 					<Switch>
+						{/* Default /menu page */}
 						<Route path="/menu" exact>
 							<MenuOverview menuCategories={menuCategories} />
 						</Route>

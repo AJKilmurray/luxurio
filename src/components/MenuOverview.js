@@ -20,9 +20,14 @@ function MenuOverview({ menuCategories }) {
 									<Link to={`/menu/category/${category.name}/${item.id}`} className="MOD-redirect">
 										<article className="MOD-item" key={item.meal}>
 											<h3>{category.name}</h3>
+											<p className="MOD-item-times">
+												{category.times.start} - {category.times.end}
+											</p>
 											<img src={item.image} />
-											<h4 className="MOD-item-title">{item.meal}</h4>
-											<h4 className="MOD-item-price">£{Math.round(Number(item.price)) / 2}</h4>
+											<div className="MOD-item-info">
+												<h4 className="MOD-item-title">{item.meal}</h4>
+												<h4 className="MOD-item-price">£{Math.round(Number(item.price)) / 2}</h4>
+											</div>
 											<div className="MOD-item-stats">
 												<h5 className="MOD-stat">
 													Calories: <span className="MOD-stat-highlight">{item.calories}</span>

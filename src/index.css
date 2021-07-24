@@ -241,6 +241,10 @@ p {
 	color: var(--white);
 }
 
+.light-brown-highlight {
+	color: var(--light-brown);
+}
+
 /* Global Animations */
 @keyframes branding {
 	0% {
@@ -437,10 +441,6 @@ p {
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
 		url("./images/welcome.jpg") center/cover no-repeat;
 	background-attachment: fixed;
-}
-
-#menu {
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("./images/menu.jpeg") center/cover no-repeat;
 }
 
 /* Hero */
@@ -843,6 +843,25 @@ footer {
 	padding-right: 1rem;
 }
 
+.menu-nav-links-container {
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+}
+
+.toggle-menu-nav {
+	margin-bottom: 0;
+	margin-left: 1rem;
+	color: var(--white);
+	min-width: 24px;
+	animation: swirl-in-fwd 0.7s linear both;
+}
+
+.toggle-menu-nav svg {
+	align-self: center;
+	color: var(--white);
+}
+
 .menu-nav-link {
 	margin-left: 1rem;
 }
@@ -889,6 +908,7 @@ footer {
 	color: var(--gray);
 	font-size: 1.25rem;
 	width: fit-content;
+	font-weight: normal;
 }
 
 .menu-of-day-content {
@@ -900,6 +920,12 @@ footer {
 .MOD-redirect {
 	width: fit-content;
 	justify-self: center;
+	transition: var(--transition);
+}
+
+.MOD-redirect:hover,
+.MOD-redirect:focus {
+	transform: scale(1.02);
 }
 
 .MOD-item {
@@ -913,18 +939,29 @@ footer {
 	color: var(--white);
 	border-bottom: 1px solid var(--brown);
 	font-size: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.25rem;
 	font-family: var(--work-sans);
+}
+
+.MOD-item-times {
+	color: var(--light-brown);
 }
 
 .MOD-item h4 {
 	margin-bottom: 0;
 }
 
+.MOD-item-info {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.5rem;
+}
+
 .MOD-item-title {
 	color: var(--gold);
 	font-size: 1.25rem;
-	margin-top: 0.25rem;
 }
 
 .MOD-item-price {
@@ -951,17 +988,15 @@ footer {
 }
 
 .menu-category-display {
-	min-height: 1000px;
-	height: 100vh;
+	height: auto;
 }
 
 .menu-category-title {
 	text-transform: capitalize;
 	width: fit-content;
-	margin: 0 auto;
+	margin: 2rem auto 2rem auto;
 	border-bottom: 1px solid var(--brown);
 	color: var(--gold);
-	margin-bottom: 2rem;
 }
 
 .category-results {
@@ -1044,6 +1079,14 @@ footer {
 		margin-bottom: 0;
 	}
 
+	.toggle-menu-nav {
+		display: none;
+	}
+
+	.menu-nav-links-container {
+		height: auto !important;
+	}
+
 	.hero-text {
 		font-size: 1.25rem;
 	}
@@ -1094,12 +1137,24 @@ footer {
 }
 
 @media screen and (max-width: 1315px) {
+	.menu-of-day-content {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.MOD-redirect:last-child {
+		grid-column: span 3;
+	}
+
 	.footer-about-container {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	.future-article {
 		grid-column: span 3;
+	}
+
+	.category-results {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 
@@ -1171,6 +1226,14 @@ footer {
 		box-shadow: var(--m-panel-shadow-pos);
 	}
 
+	.menu-of-day-content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.MOD-redirect:last-child {
+		grid-column: span 1;
+	}
+
 	.footer-about-container {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -1212,6 +1275,12 @@ footer {
 
 	.separator-figure {
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.category-results {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -1282,6 +1351,31 @@ footer {
 	.align-end {
 		justify-content: center;
 	}
+
+	.menu-nav-container {
+		flex-direction: column;
+	}
+
+	.menu-nav-header h3 {
+		padding: 0;
+		border-right: 0;
+	}
+
+	.toggle-menu-nav {
+		margin-left: 0;
+		margin-top: 0.5rem;
+	}
+
+	.menu-nav-links {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.menu-nav-link {
+		margin-left: 0;
+		margin-top: 0.5rem;
+	}
 }
 
 @media screen and (max-width: 760px) {
@@ -1296,7 +1390,17 @@ footer {
 }
 
 @media screen and (max-width: 705px) {
+	.menu-of-day-content {
+		grid-template-columns: 1fr;
+	}
+
 	.footer-about-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 625px) {
+	.category-results {
 		grid-template-columns: 1fr;
 	}
 }
@@ -1405,6 +1509,10 @@ footer {
 	#map {
 		width: 250px !important;
 	}
+
+	.menu-article-title {
+		font-size: 1.75rem;
+	}
 }
 
 @media screen and (max-width: 325px) {
@@ -1421,8 +1529,28 @@ footer {
 	}
 }
 
+@media screen and (max-width: 317px) {
+	.menu-category-title {
+		font-size: 1.75rem;
+	}
+
+	.menu-card img {
+		width: 225px;
+		height: 225px;
+	}
+
+	.MOD-item img {
+		width: 225px !important;
+		height: 225px !important;
+	}
+}
+
 @media screen and (max-width: 296px) {
 	.separator-text h2 {
 		font-size: 1.4rem;
+	}
+
+	.menu-article-title {
+		font-size: 1.65rem;
 	}
 }
