@@ -5,7 +5,7 @@ function Separator({ textSide, title, text, btnLink, btnText, imgSrc }) {
 	return textSide === "left" ? (
 		<section className="separator">
 			<div className="container grid-container">
-				<ScrollAnimation animateIn="animate__bounceIn" animateOnce={true}>
+				<ScrollAnimation animateIn="animate__bounceIn" animateOnce={true} className="separator-content-1">
 					<article className="separator-text">
 						<h2>{title}</h2>
 						<p>{text}</p>
@@ -16,7 +16,7 @@ function Separator({ textSide, title, text, btnLink, btnText, imgSrc }) {
 						</div>
 					</article>
 				</ScrollAnimation>
-				<ScrollAnimation animateIn="animate__bounceIn" animateOnce={true}>
+				<ScrollAnimation animateIn="animate__bounceIn" animateOnce={true} className="separator-content-2">
 					<figure className="separator-figure flex-container">
 						<img className="separator-img" src={imgSrc} alt="" />
 					</figure>
