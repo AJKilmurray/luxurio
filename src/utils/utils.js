@@ -180,7 +180,7 @@ export const menuCategories = {
 		menu: [
 			{
 				id: 1,
-				meal: "Full English Breakfast",
+				meal: "Full English",
 				desc: "Our full english breakfast is freshly cooked and includes bacon, sausages, eggs, black pudding, baked beans, tomatoes, mushrooms and toast.",
 				price: 12.99,
 				image: FullEnglishBreakfast,
@@ -417,8 +417,8 @@ export const menuCategories = {
 	dessert: {
 		name: "dessert",
 		times: {
-			start: "3pm",
-			end: "8pm",
+			start: "3:00pm",
+			end: "8:00pm",
 		},
 		menu: [
 			{
