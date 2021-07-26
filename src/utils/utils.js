@@ -186,6 +186,7 @@ export const menuCategories = {
 				image: FullEnglishBreakfast,
 				servings: 2,
 				calories: 875,
+				category: "breakfast",
 			},
 			{
 				id: 2,
@@ -195,6 +196,7 @@ export const menuCategories = {
 				image: FrenchToast,
 				servings: 2,
 				calories: 795,
+				category: "breakfast",
 			},
 			{
 				id: 3,
@@ -204,6 +206,7 @@ export const menuCategories = {
 				image: ScrambledEggs,
 				servings: 1,
 				calories: 460,
+				category: "breakfast",
 			},
 			{
 				id: 4,
@@ -213,6 +216,7 @@ export const menuCategories = {
 				image: Waffles,
 				servings: 2,
 				calories: 650,
+				category: "breakfast",
 			},
 			{
 				id: 5,
@@ -222,6 +226,7 @@ export const menuCategories = {
 				image: Pancakes,
 				servings: 2,
 				calories: 950,
+				category: "breakfast",
 			},
 			{
 				id: 6,
@@ -231,6 +236,7 @@ export const menuCategories = {
 				image: FruitSalad,
 				servings: 2,
 				calories: 790,
+				category: "breakfast",
 			},
 			{
 				id: 7,
@@ -240,6 +246,7 @@ export const menuCategories = {
 				image: Porridge,
 				servings: 1,
 				calories: 600,
+				category: "breakfast",
 			},
 			{
 				id: 8,
@@ -249,6 +256,7 @@ export const menuCategories = {
 				image: HamSandwich,
 				servings: 1,
 				calories: 560,
+				category: "breakfast",
 			},
 		],
 	},
@@ -267,6 +275,7 @@ export const menuCategories = {
 				image: ChickenWraps,
 				servings: 2,
 				calories: 930,
+				category: "lunch",
 			},
 			{
 				id: 2,
@@ -276,6 +285,7 @@ export const menuCategories = {
 				image: BeefBurger,
 				servings: 1,
 				calories: 880,
+				category: "lunch",
 			},
 			{
 				id: 3,
@@ -285,6 +295,7 @@ export const menuCategories = {
 				image: Ribs,
 				servings: 3,
 				calories: 1230,
+				category: "lunch",
 			},
 			{
 				id: 4,
@@ -294,6 +305,7 @@ export const menuCategories = {
 				image: Macaroni,
 				servings: 1,
 				calories: 790,
+				category: "lunch",
 			},
 			{
 				id: 5,
@@ -303,6 +315,7 @@ export const menuCategories = {
 				image: BaconRoll,
 				servings: 1,
 				calories: 825,
+				category: "lunch",
 			},
 			{
 				id: 6,
@@ -312,6 +325,7 @@ export const menuCategories = {
 				image: LentilSoup,
 				servings: 1,
 				calories: 565,
+				category: "lunch",
 			},
 			{
 				id: 7,
@@ -321,6 +335,7 @@ export const menuCategories = {
 				image: ChickenSalad,
 				servings: 1,
 				calories: 640,
+				category: "lunch",
 			},
 			{
 				id: 8,
@@ -330,6 +345,7 @@ export const menuCategories = {
 				image: GrilledSandwich,
 				servings: 1,
 				calories: 725,
+				category: "lunch",
 			},
 		],
 	},
@@ -348,6 +364,7 @@ export const menuCategories = {
 				image: SteakChips,
 				servings: 1,
 				calories: 815,
+				category: "dinner",
 			},
 			{
 				id: 2,
@@ -357,6 +374,7 @@ export const menuCategories = {
 				image: PorkChops,
 				servings: 2,
 				calories: 860,
+				category: "dinner",
 			},
 			{
 				id: 3,
@@ -366,6 +384,7 @@ export const menuCategories = {
 				image: Pizza,
 				servings: 2,
 				calories: 985,
+				category: "dinner",
 			},
 			{
 				id: 4,
@@ -375,6 +394,7 @@ export const menuCategories = {
 				image: Bolognese,
 				servings: 1,
 				calories: 710,
+				category: "dinner",
 			},
 			{
 				id: 5,
@@ -384,6 +404,7 @@ export const menuCategories = {
 				image: Risotto,
 				servings: 2,
 				calories: 805,
+				category: "dinner",
 			},
 			{
 				id: 6,
@@ -393,6 +414,7 @@ export const menuCategories = {
 				image: FishChips,
 				servings: 2,
 				calories: 970,
+				category: "dinner",
 			},
 			{
 				id: 7,
@@ -402,6 +424,7 @@ export const menuCategories = {
 				image: BakedPotato,
 				servings: 1,
 				calories: 800,
+				category: "dinner",
 			},
 			{
 				id: 8,
@@ -411,6 +434,7 @@ export const menuCategories = {
 				image: Carbonara,
 				servings: 1,
 				calories: 765,
+				category: "dinner",
 			},
 		],
 	},
@@ -429,6 +453,7 @@ export const menuCategories = {
 				image: Sundae,
 				servings: 1,
 				calories: 930,
+				category: "dessert",
 			},
 			{
 				id: 2,
@@ -438,6 +463,7 @@ export const menuCategories = {
 				image: Brownie,
 				servings: 1,
 				calories: 895,
+				category: "dessert",
 			},
 			{
 				id: 3,
@@ -447,6 +473,7 @@ export const menuCategories = {
 				image: ApplePie,
 				servings: 1,
 				calories: 835,
+				category: "dessert",
 			},
 			{
 				id: 4,
@@ -456,6 +483,7 @@ export const menuCategories = {
 				image: CinnamonRolls,
 				servings: 1,
 				calories: 780,
+				category: "dessert",
 			},
 			{
 				id: 5,
@@ -465,6 +493,7 @@ export const menuCategories = {
 				image: ChocolateCake,
 				servings: 1,
 				calories: 840,
+				category: "dessert",
 			},
 			{
 				id: 6,
@@ -474,6 +503,7 @@ export const menuCategories = {
 				image: CheeseCake,
 				servings: 1,
 				calories: 820,
+				category: "dessert",
 			},
 			{
 				id: 7,
@@ -483,6 +513,7 @@ export const menuCategories = {
 				image: Eclaires,
 				servings: 1,
 				calories: 785,
+				category: "dessert",
 			},
 			{
 				id: 8,
@@ -492,6 +523,7 @@ export const menuCategories = {
 				image: Triffle,
 				servings: 1,
 				calories: 810,
+				category: "desserts",
 			},
 		],
 	},

@@ -30,6 +30,7 @@ function MenuItemDisplay({ menuCategories }) {
 		<article className="display-individual-item container">
 			{/* For each category */}
 			{categories.map((menuCategory) => {
+				console.log(document.referrer);
 				// If the category name is equal to the catagory paramater within the URL
 				if (menuCategory.name === category) {
 					// Iterate over the menu of the category
