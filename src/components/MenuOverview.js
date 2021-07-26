@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 function MenuOverview({ menuCategories }) {
   const categories = Object.values(menuCategories);
   const date = new Date();
-  const breakfast = categories[0];
-  const lunch = categories[1];
-  const dinner = categories[2];
+  const breakfast = categories[0].menu[date.getDay() + 1];
+  const lunch = categories[1].menu[date.getDay() + 1];
+  const dinner = categories[2].menu[date.getDay() + 1];
 
   return (
     <section id="menu-overview">
@@ -66,13 +66,22 @@ function MenuOverview({ menuCategories }) {
         <article className="special-offers">
           <div className="grid-container">
             <section className="offer">
-              <h3>{breakfast.menu[date.getDay() + 1].meal}</h3>
+              <figure>
+                <img src={breakfast.image} alt="" />
+              </figure>
+              <h3>{breakfast.meal}</h3>
             </section>
             <section className="offer">
-              <h3>{lunch.menu[date.getDay() + 1].meal}</h3>
+              <figure>
+                <img src={lunch.image} alt="" />
+              </figure>
+              <h3>{lunch.meal}</h3>
             </section>
             <section className="offer">
-              <h3>{dinner.menu[date.getDay() + 1].meal}</h3>
+              <figure>
+                <img src={dinner.image} alt="" />
+              </figure>
+              <h3>{dinner.meal}</h3>
             </section>
           </div>
         </article>
