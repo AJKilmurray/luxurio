@@ -90,6 +90,7 @@ function MenuOverview({ menuCategories }) {
 				</article>
 				<article className="special-offers" className="triple-col">
 					<h3 className="offers-title">Special Offers</h3>
+					<h4>75% Off</h4>
 					<div className="grid-container">
 						{specialOfferItems.map((item, idx) => (
 							<Link to={`/menu/category/${item.category}/${item.id}`} className="offer-container">
