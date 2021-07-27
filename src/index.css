@@ -1131,41 +1131,44 @@ footer {
 	align-items: center;
 }
 
+.offer-title {
+	color: var(--white);
+	width: fit-content;
+	margin: 0 auto;
+	border-bottom: 2px solid var(--gold);
+	margin-bottom: 1rem;
+	font-size: 1.4rem;
+}
+
 .offer-img {
 	width: 250px;
 	height: 250px;
 	object-fit: cover;
-	box-shadow: var(--s-panel-shadow-pos);
 }
 
 .offer-details {
-	width: 100%;
 	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
-	justify-content: space-between;
+	width: 100%;
 	margin-top: 1.75rem;
 	padding-top: 0.5rem;
-	border-top: 2px solid var(--light-brown);
+	border-top: 2px solid var(--brown);
 }
 
-.offer h3 {
-	color: var(--gold);
-	font-size: 1.25rem;
-}
-
-.offer h4 {
-	color: var(--gray);
-	font-size: 1.1rem;
-}
-
-.offer h3,
-.offer h4 {
-	margin-bottom: 0;
+.arrow {
+	color: var(--light-brown);
 }
 
 #menu-statistics,
 #special-offers {
 	margin: 10rem 0;
+}
+
+.offer h4 {
+	color: var(--white);
+	font-size: 1.25rem;
+	margin-bottom: 0;
 }
 
 /* Media Queries */

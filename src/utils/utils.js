@@ -388,7 +388,7 @@ export const menuCategories = {
 			},
 			{
 				id: 4,
-				meal: "Spaghetti Bolognese",
+				meal: "Bolognese",
 				desc: "Freshly served spaghetti with a sauce of minced beef, tomato, onion, and herbs, picked from our home-grown range of plants and herbs.",
 				price: 14.49,
 				image: Bolognese,

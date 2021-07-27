@@ -3,9 +3,12 @@ import Separator from "../components/Separator";
 
 function Bookings() {
 	return (
-		<div>
-			<div></div>
-		</div>
+		<>
+			<section className="landing-section">
+				<Navbar navLinks={["/", "menu", "about"]} />
+				<Separator textSide="left" />
+			</section>
+		</>
 	);
 }
 

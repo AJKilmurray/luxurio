@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 function MenuOverview({ menuCategories }) {
 	const categories = Object.values(menuCategories);
@@ -108,10 +109,20 @@ function MenuOverview({ menuCategories }) {
 						{specialOfferItems.map((item, idx) => (
 							<Link to={`/menu/category/${item.category}/${item.id}`} className="offer-container" key={idx}>
 								<section className="offer">
+									<h3 className="offer-title">{item.meal}</h3>
 									<img className="offer-img" src={item.image} alt="" />
 									<div className="offer-details">
-										<h3>{item.meal}</h3>
-										<h4>£{Math.round(item.price) / 4}</h4>
+										<h4>
+											<s className="strike">
+												<span className="gold-highlight">£</span>
+												{item.price}
+											</s>
+										</h4>{" "}
+										<FaArrowCircleRight size={24} className="arrow" />{" "}
+										<h4>
+											<span className="gold-highlight">£</span>
+											{Math.round(item.price) / 4}
+										</h4>
 									</div>
 								</section>
 							</Link>
