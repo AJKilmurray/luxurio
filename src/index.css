@@ -1088,6 +1088,7 @@ footer {
 
 .stat-num {
 	color: var(--gold);
+	font-family: var(--inter);
 }
 
 .stat-subtitle {
@@ -1133,6 +1134,7 @@ footer {
 .offer-img {
 	width: 250px;
 	height: 250px;
+	object-fit: cover;
 	box-shadow: var(--s-panel-shadow-pos);
 }
 
@@ -1407,6 +1409,7 @@ footer {
 @media screen and (max-width: 920px) {
 	.triple-col .grid-container {
 		grid-template-columns: 1fr 1fr;
+		row-gap: 5rem;
 	}
 
 	.offer-container:nth-child(3),

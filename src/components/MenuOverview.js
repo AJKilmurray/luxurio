@@ -89,13 +89,13 @@ function MenuOverview({ menuCategories }) {
 							<h4 className="stat-subtitle">Menu Choices</h4>
 						</section>
 						<section className="menu-statistic">
+							<h2 className="stat-num">FREE</h2>
+							<h4 className="stat-subtitle">Birthday Meals</h4>
+						</section>
+						<section className="menu-statistic">
 							<h2 className="stat-num">{menuStats.reviews}</h2>
 							{/* Stars */}
 							<h4 className="stat-subtitle">Reviews</h4>
-						</section>
-						<section className="menu-statistic">
-							<h2 className="stat-num">FREE</h2>
-							<h4 className="stat-subtitle">Birthday Meals</h4>
 						</section>
 					</div>
 				</article>
