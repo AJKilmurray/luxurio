@@ -24,7 +24,7 @@ function Home() {
       <main>
         <section id="welcome" className="landing-section menu-landing">
           <Navbar navLinks={["menu"]} />
-          <Hero title={homeHeroTitle} text={homeHeroText} buttonLink="bookings" buttonText="View Menu" />
+          <Hero title={homeHeroTitle} text={homeHeroText} buttonLink="menu" buttonText="View Menu" />
         </section>
         {/* Time Schedule Table */}
         <Schedule headers={scheduleHeader} days={scheduleDays} />
